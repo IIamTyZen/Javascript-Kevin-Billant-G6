@@ -1,0 +1,203 @@
+.container{
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #101010;
+}
+
+.grid-mode{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.nav{
+    max-width: 968px;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-logo,
+.nav-toggle{
+    color: #FFF;
+    font-weight: 500;
+}
+
+.navigation-logo:hover{
+    color: #D87D4A;
+}
+
+.nav-toggle{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-toggle:hover{
+    color: #D87D4A;
+}
+
+@media screen and (max-width: 767px){
+    .nav-menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: #101010;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgb(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+    
+}
+
+.list-nav{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.navigation-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.navigation-link:hover{
+    color: #D87D4A;
+}
+
+.nav-icon{
+    font-size: 1.2rem;
+}
+
+.nav-close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #D87D4A;
+}
+
+.nav-close:hover{
+    color: #FBAF85;
+}
+
+/* show menu */
+.show-menu{
+    bottom: 0;
+}
+
+/* Active link */
+.active-link{
+    color: #D87D4A;
+}
+
+/* Change background header */
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+}
+
+
+@media screen and (max-width: 350px){
+    .container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .nav-menu{
+        padding: 2rem .25rem 4rem;
+    }
+
+    .list-nav{
+        column-gap: 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header{
+        top: 0;
+        bottom: initial;
+    }
+
+    .header,
+    .main,
+    .footer-container{
+        padding: 0 1rem;
+    }
+
+    .nav{
+        height: calc(2rem + 1.5rem);
+        column-gap: 1rem;
+    }
+
+    .nav-icon,
+    .nav-close,
+    .nav-toggle{
+        display: none;
+    }
+
+    .list-nav{
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    .nav-menu{
+        margin-left: auto;
+    }
+}
+
+
+    /* For large devices */
+@media screen and (min-width: 1024px){
+    .header,
+    .main,
+    .footer-container{
+        padding: 0;
+    }
+
+}
+
+
+/* ======================= SCROLL UP========================= */ 
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: #D87D4A;
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: 100;
+    transition: .4s;
+}
+
+.scrollup:hover{
+    background-color: #FBAF85;
+}
+
+.scrollup-icon{
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+/* Show scroll */
+.show-scroll{
+    bottom: 5rem;
+}
